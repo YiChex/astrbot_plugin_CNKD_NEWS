@@ -1,6 +1,6 @@
 name: astrbot_plugin_CNKD_NEWS
 display_name: UapiPro每日新闻
-desc: 来源于稳定接口的每日新闻推送插件 使用权威来源整合 无需额外配置 下载即用 支持白名单控制 支持定时发送
+desc: 来源于稳定接口的每日新闻推送插件 使用权威来源整合 无需额外配置 下载即用 支持白名单控制 支持定时发送 支持时区配置
 version: v0.1.0
 author: CNKD-Yichex
 repo: https://github.com/YiChex/astrbot_plugin_CNKD_NEWS
