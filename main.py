@@ -14,7 +14,7 @@ from typing import Dict, List, Optional, Tuple
 import hashlib
 import time
 
-@register("CNKD_NEWS", "CNKD", "每日新闻图片插件", "1.0.0")
+@register("CNKD_NEWS", "CNKD", "每日新闻图片插件", "0.1.0")
 class CNKDNewsPlugin(Star):
     def __init__(self, context: Context, config: dict):
         super().__init__(context)
@@ -184,8 +184,8 @@ class CNKDNewsPlugin(Star):
                 weekday = ["一", "二", "三", "四", "五", "六", "日"][now.weekday()]
                 
                 message = MessageChain([
-                    Plain(f"📰 每日新闻简报 ({date_str} 星期{weekday})\n"),
-                    Plain("🌍 快速了解天下大事\n\n"),
+                    Plain(f"📰 简报 ({date_str} 星期{weekday})\n"),
+                    Plain("🌍 CNKD|UapiPro\n\n"),
                     Image.fromFileSystem(temp_path)
                 ])
                 
@@ -271,6 +271,8 @@ class CNKDNewsPlugin(Star):
 /新闻白名单列表 - 查看所有白名单群组
 /新闻管理员添加 [UID] - 添加管理员
 /新闻管理员删除 [UID] - 移除管理员
+
+仓库地址：https://github.com/YiChex/astrbot_plugin_CNKD_NEWS
 
 时间格式：HH:MM (24小时制)
 示例：/新闻定时 09:00
