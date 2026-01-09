@@ -1,0 +1,54 @@
+{
+  "enabled": {
+    "description": "插件总开关",
+    "type": "bool",
+    "default": true,
+    "obvious_hint": true
+  },
+  "whitelist": {
+    "description": "允许使用插件的群聊UMO白名单",
+    "type": "list",
+    "default": [
+      "QQ:GroupMessage:1030157691",
+      "QQ:GroupMessage:1063217421"
+    ],
+    "hint": "格式为：平台:消息类型:会话ID，例如 QQ:GroupMessage:123456789"
+  },
+  "admin_users": {
+    "description": "管理员用户ID列表",
+    "type": "list",
+    "default": ["475407353"],
+    "hint": "拥有管理员权限的用户ID"
+  },
+  "default_send_time": {
+    "description": "默认定时发送时间",
+    "type": "string",
+    "default": "09:00",
+    "hint": "格式 HH:MM，24小时制"
+  },
+  "timezone": {
+    "description": "时区设置",
+    "type": "string",
+    "default": "Asia/Shanghai",
+    "options": ["Asia/Shanghai", "Asia/Tokyo", "America/New_York", "Europe/London", "UTC"],
+    "hint": "选择您所在的时区"
+  },
+  "skip_weekend": {
+    "description": "是否跳过周末",
+    "type": "bool",
+    "default": true,
+    "hint": "启用后，周末将不发送每日新闻"
+  },
+  "retry_times": {
+    "description": "失败重试次数",
+    "type": "int",
+    "default": 3,
+    "hint": "获取新闻失败时的重试次数"
+  },
+  "timeout": {
+    "description": "请求超时时间(秒)",
+    "type": "int",
+    "default": 15,
+    "hint": "每日新闻API请求超时时间，建议至少10秒"
+  }
+}
